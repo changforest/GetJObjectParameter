@@ -10,3 +10,14 @@ Console.WriteLine(n2);
 
 //string name = stuff.0;
 //string address = stuff.Address.City;
+
+string s = "{\"Result\":\"OK\",\"Message\":\"2022-10-06 22:00 ok \",\"LessonCalendarId\":\"4022988\"}";
+
+VoiceTubeBookingLessonPhpOutput? phpResult = System.Text.Json.JsonSerializer.Deserialize<VoiceTubeBookingLessonPhpOutput>(s);
+Console.WriteLine(phpResult);
+public class VoiceTubeBookingLessonPhpOutput
+{
+    public string Result { get; set; }
+    public string Message { get; set; }
+    public string LessonCalendarId { get; set; }
+}
